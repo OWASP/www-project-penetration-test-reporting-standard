@@ -1,4 +1,4 @@
 ### Leaders
-* [Leader Name](mailto:leader.email@owasp.org)
-* [Leader Name](mailto:leader.email@owasp.org)
-* [Leader Name](mailto:leader.email@owasp.org)
+* [Jamieson OReilly](mailto:Jamieson.OReilly90@owasp.org)
+* [Noah Farmer](mailto:Noah.Farmer@owasp.org)
+* [Hiren Vavadiya](mailto:Hiren.Vavadiya@owasp.org)
