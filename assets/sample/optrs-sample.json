@@ -1,0 +1,177 @@
+{
+  "report_metadata": {
+    "report_id": "123e4567-e89b-12d3-a456-426614174000",
+    "client_name": "FinTech Corp",
+    "engagement_name": "Mobile Banking App Security Assessment",
+    "engagement_id": "fintech-mobile-2024",
+    "date_generated": "2025-02-08T10:00:00Z",
+    "date_of_testing": {
+      "start": "2025-01-15T09:00:00Z",
+      "end": "2025-01-30T18:00:00Z"
+    },
+    "tester_info": {
+      "company": "Dvuln Security",
+      "team": [
+        {
+          "name": "John Doe",
+          "email": "johndoe@dvuln.com",
+          "role": "Lead Security Consultant"
+        },
+        {
+          "name": "Jane Smith",
+          "email": "janesmith@dvuln.com",
+          "role": "API Security Specialist"
+        }
+      ]
+    },
+    "recipient": {
+      "company": "FinTech Corp",
+      "contacts": [
+        {
+          "name": "Alice Johnson",
+          "email": "alice.johnson@fintechcorp.com",
+          "role": "CISO"
+        },
+        {
+          "name": "Bob Williams",
+          "email": "bob.williams@fintechcorp.com",
+          "role": "Security Engineer"
+        }
+      ]
+    },
+    "report_version": "1.0"
+  },
+  "scope": {
+    "in_scope": [
+      {
+        "target": "FinTech Mobile Banking App (Android, iOS)",
+        "description": "The mobile application used for banking transactions.",
+        "testing_type": "gray-box",
+        "methodologies": [
+          "OWASP Mobile Security Testing Guide (MSTG)",
+          "OWASP Web Security Testing Guide (WSTG)"
+        ]
+      },
+      {
+        "target": "api.fintechcorp.com",
+        "description": "The backend API powering the mobile application.",
+        "testing_type": "black-box",
+        "methodologies": [
+          "OWASP API Security Top 10",
+          "OWASP Web Security Testing Guide (WSTG)"
+        ]
+      }
+    ]
+  },
+  "executive_summary": {
+    "risk_rating": "high",
+    "business_impact": "If exploited, these vulnerabilities could lead to financial fraud, unauthorized account access, and reputational damage.",
+    "strengths": [
+      "The mobile app implements HTTPS encryption for all network traffic.",
+      "Multi-factor authentication (MFA) is enforced for high-risk transactions.",
+      "API follows RESTful best practices and avoids exposing unnecessary endpoints."
+    ],
+    "challenges": [
+      "Sensitive user data is stored in unencrypted local storage on mobile devices.",
+      "API authentication does not have sufficient rate limiting, making it vulnerable to brute-force attacks.",
+      "Some API endpoints return excessive information, increasing the risk of data leakage."
+    ],
+    "strategic_recommendations": [
+      "Implement client-side encryption for sensitive data stored on mobile devices.",
+      "Enhance API authentication security by enforcing rate limiting and account lockout mechanisms.",
+      "Conduct regular security testing to proactively identify and address vulnerabilities before deployment."
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Sensitive Data Stored Unencrypted on Device",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+      "summary": "The mobile application stores sensitive user credentials and session tokens in plain text in the device’s local storage.",
+      "affected_assets": [
+        "FinTech Mobile Banking App"
+      ],
+      "technical_details": {
+        "impact": "An attacker with access to the device can retrieve user credentials and gain unauthorized access.",
+        "testing_process": "Accessed the local storage through ADB and located unencrypted credentials in XML files. Extracted user credentials from `/data/data/com.fintechcorp/shared_prefs/user_data.xml`."
+      },
+      "recommendations": [
+        "Encrypt sensitive data using Secure Enclave (iOS) or Keystore (Android)."
+      ],
+      "references": [
+        "https://developer.android.com/security/keystore",
+        "https://developer.apple.com/documentation/security/keychain_services"
+      ],
+      "status": "unresolved",
+      "media": [
+        {
+          "type": "screenshot",
+          "file_name": "data_leak.png",
+          "file_path": "/media/data_leak.png"
+        },
+        {
+          "type": "script",
+          "file_name": "extraction_script.sh",
+          "file_path": "/media/extraction_script.sh"
+        }
+      ]
+    },
+    {
+      "id": "F-002",
+      "title": "Insecure API Authentication – No Rate Limiting",
+      "severity": "critical",
+      "cvss_score": 9.1,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "summary": "The API does not implement rate limiting, allowing brute-force attacks on login endpoints.",
+      "affected_assets": [
+        "api.fintechcorp.com"
+      ],
+      "technical_details": {
+        "impact": "Allows attackers to gain unauthorized access to accounts through brute-force attacks.",
+        "testing_process": "Ran Hydra against API authentication endpoints with a large credential set. Observed no rate-limiting or account lockouts. Captured login requests with Burp Suite and replayed them to confirm unlimited attempts."
+      },
+      "recommendations": [
+        "Implement account lockout or exponential backoff for repeated failed login attempts.",
+        "Use CAPTCHA to deter automated attacks."
+      ],
+      "references": [
+        "https://owasp.org/www-project-api-security/",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+      ],
+      "status": "unresolved",
+      "media": [
+        {
+          "type": "pcap",
+          "file_name": "bruteforce.pcap",
+          "file_path": "/media/bruteforce.pcap"
+        }
+      ]
+    }
+  ],
+  "artefacts": {
+    "global_test_log": {
+      "file_name": "burpsuite-session.burp",
+      "file_path": "/logs/burpsuite-session.burp"
+    },
+    "tools_used": [
+      {
+        "tool_name": "Burp Suite",
+        "version": "2025.1"
+      },
+      {
+        "tool_name": "MobSF",
+        "version": "3.5"
+      },
+      {
+        "tool_name": "Objection",
+        "version": "1.9"
+      },
+      {
+        "tool_name": "Postman",
+        "version": "2025.2"
+      }
+    ]
+  }
+}
