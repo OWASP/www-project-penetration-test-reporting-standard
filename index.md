@@ -1,37 +1,73 @@
 ---
-
 layout: col-sidebar
 title: OWASP Penetration Test Reporting Standard
-tags: example-tag
+tags: penetration-testing, reporting, standardization, security-automation
 level: 2
 type: documentation
-pitch: A very brief, one-line description of your project
-
+pitch: A unified, machine-readable standard for penetration test reporting to drive consistency, automation, and interoperability.
 ---
 
-The OWASP Penetration Test Reporting Standard aims to standardize the format and content of penetration test reports to address the industry's lack of consistency. With tens of thousands of companies producing different types of reports, integrating penetration test findings into meaningful internal processes becomes challenging, leading to missed issues and inconsistent data.
+## Overview
 
-By creating a standard in JSON format, this project will facilitate automation, ease of data ingestion, and interoperability among security tools and processes. The standard will include guidance on how to structure reports, categorize findings, and recommend mitigation strategies, making it easier for organizations to understand and act upon penetration test results.
+The OWASP Penetration Test Reporting Standard (OPTRS) addresses the inconsistency in penetration test reports, where thousands of companies generate reports in different formats, making it difficult to integrate findings into security workflows.  
 
-### Road Map
-The roadmap for this project involves several key phases:
+By defining a structured, JSON-based format, OPTRS ensures that penetration test results are:  
 
-1. Research and Development
-Gather industry insights and existing best practices in penetration testing and reporting.
-Collaborate with penetration testing experts to ensure the standard covers all necessary aspects.
+- **Consistent**. Standardized format for easy comparison across engagements.  
+- **Machine-readable**. Facilitates integration with SIEMs, vulnerability management tools, and automation workflows.  
+- **Actionable**. Findings are structured for better remediation tracking and risk prioritization.  
 
-2. Drafting the Standard
-Create a detailed outline for the JSON-based standard.
-Develop templates for penetration test reports following this standard.
+## Why OPTRS?  
 
-3. Community Feedback and Review
-Engage the OWASP community and other security professionals to gather feedback on the draft standard.
-Incorporate feedback and make necessary revisions.
+Without a standard, security teams face:  
 
-4. Standardization and Advocacy
-Finalize the standard and publish it on the OWASP platform.
-Advocate for security vendors and penetration test service companies to implement this standard through awareness-raising initiatives and strategic alignment with industry organizations like CREST International.
+- **Disparate reporting formats**, leading to confusion and delays in addressing vulnerabilities.  
+- **Lack of automation**, requiring manual effort to extract insights from reports.  
+- **Poor interoperability**, making it hard to integrate findings into vulnerability management platforms.  
 
-5. Ongoing Maintenance and Updates
-Establish a process for continuous improvement of the standard.
-Regularly update the standard to reflect changes in the penetration testing landscape.
+OPTRS solves this by providing a universal format that simplifies security operations and accelerates risk mitigation.  
+
+## Roadmap  
+
+The development of OPTRS follows a structured, community-driven approach.  
+
+### 1. Research and Development  
+- Gather industry insights on best practices in penetration testing and reporting.  
+- Collaborate with security professionals, penetration testers, and organisations to define essential reporting elements.  
+
+### 2. Drafting the Standard  
+- Develop a JSON-based schema for penetration test reports.  
+- Create templates and guidelines for structuring findings, risk ratings, and remediation steps.  
+
+### 3. Community Feedback and Review  
+- Engage the OWASP community and industry experts for feedback.  
+- Refine the standard based on real-world usability and adoption challenges.  
+
+### 4. Standardization and Advocacy  
+- Publish the final version of OPTRS on OWASP.  
+- Work with security vendors, penetration testing firms, and industry bodies such as CREST International to drive adoption.  
+- Promote awareness through conferences, webinars, and security meetups.  
+
+### 5. Ongoing Maintenance and Updates  
+- Establish a governance process for continuous improvement.  
+- Regularly update the standard to reflect changes in penetration testing methodologies.  
+
+## Current Progress  
+
+A structured JSON schema for penetration test reports has been developed, with:  
+
+- Clear categorization of findings  
+- Automation-ready format  
+- Interoperability with security tools  
+
+**View sample JSON reports and schema screenshots here** (Insert Link or Reference)  
+
+## Get Involved  
+
+- **Security professionals and penetration testers**. Provide feedback on the draft standard.  
+- **Organisations and vendors**. Adopt OPTRS to improve penetration test reporting efficiency.  
+- **Developers**. Help build validation tools, integrations, and extensions for OPTRS.  
+
+**Join the discussion and contribute.**  
+
+**Contact us on OWASP Slack:** [OWASP Slack #penetration-testing Channel](https://owasp.slack.com/archives/C08BYRE903Z) 
