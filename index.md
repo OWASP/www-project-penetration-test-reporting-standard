@@ -1,6 +1,6 @@
 ---
 layout: col-sidebar
-title: OWASP Penetration Test Reporting Standard
+title: OWASP Penetration Test Reporting Standard (OPTRS)
 tags: penetration-testing, reporting, standardization, security-automation
 level: 2
 type: documentation
@@ -11,7 +11,7 @@ pitch: A unified, machine-readable standard for penetration test reporting to dr
 
 The OWASP Penetration Test Reporting Standard (OPTRS) addresses the inconsistency in penetration test reports, where thousands of companies generate reports in different formats, making it difficult to integrate findings into security workflows.
 
-<img src="https://github.com/OWASP/www-project-penetration-test-reporting-standard/blob/main/assets/images/optrs-logo-white.png" alt="Alt Text" width="500" height="500">
+<img src="https://github.com/OWASP/www-project-penetration-test-reporting-standard/blob/main/assets/images/optrs-logo-white.png" width="500" height="500">
 
 
 By defining a structured, JSON-based format, OPTRS ensures that penetration test results are:  
