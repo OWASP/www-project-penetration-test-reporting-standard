@@ -29,26 +29,24 @@ OPTRS solves this by providing a universal format that simplifies security opera
 
 ## Roadmap  
 
-The development of OPTRS follows a structured, community-driven approach.  
+### **Phase 1: Research and Development** ✅ *Completed*  
+- Gathered industry insights on best practices in penetration testing and reporting.  
+- Engaged with security professionals, penetration testers, and organisations to define essential reporting elements.  
 
-### 1. Research and Development  
-- Gather industry insights on best practices in penetration testing and reporting.  
-- Collaborate with security professionals, penetration testers, and organisations to define essential reporting elements.  
+### **Phase 2: Drafting the Standard** ✅ *Completed*  
+- Developed a structured JSON-based schema for penetration test reports.  
+- Created templates and guidelines for structuring findings, risk ratings, and remediation steps.  
 
-### 2. Drafting the Standard  
-- Develop a JSON-based schema for penetration test reports.  
-- Create templates and guidelines for structuring findings, risk ratings, and remediation steps.  
+### **Phase 3: Community Feedback and Review** ⏳ *Current Phase*  
+- Engaging the OWASP community and industry experts for feedback.  
+- Refining the standard based on real-world usability and adoption challenges.  
 
-### 3. Community Feedback and Review  
-- Engage the OWASP community and industry experts for feedback.  
-- Refine the standard based on real-world usability and adoption challenges.  
-
-### 4. Standardization and Advocacy  
+### **Phase 4: Standardization and Advocacy** 🚀 *Upcoming*  
 - Publish the final version of OPTRS on OWASP.  
 - Work with security vendors, penetration testing firms, and industry bodies such as CREST International to drive adoption.  
 - Promote awareness through conferences, webinars, and security meetups.  
 
-### 5. Ongoing Maintenance and Updates  
+### **Phase 5: Ongoing Maintenance and Updates** 🔄 *Planned*  
 - Establish a governance process for continuous improvement.  
 - Regularly update the standard to reflect changes in penetration testing methodologies.  
 
@@ -60,7 +58,13 @@ A structured JSON schema for penetration test reports has been developed, with:
 - Automation-ready format  
 - Interoperability with security tools  
 
-**View sample JSON reports and schema screenshots here** (Insert Link or Reference)  
+### JSON Standard Representation  
+
+Below is a visual representation of the OPTRS JSON format:  
+
+![JSON Schema Example](https://github.com/OWASP/www-project-penetration-test-reporting-standard/blob/main/assets/images/optrs.png?raw=true)
+
+**View the full JSON schema and sample reports here** (Insert Link or Reference)
 
 ## Get Involved  
 
@@ -70,4 +74,4 @@ A structured JSON schema for penetration test reports has been developed, with:
 
 **Join the discussion and contribute.**  
 
-**Contact us on OWASP Slack:** [OWASP Slack #penetration-testing Channel](https://owasp.slack.com/archives/C08BYRE903Z) 
+**Contact us on OWASP Slack:** [OWASP Slack #penetration-testing Channel](https://owasp.slack.com/archives/C08BYRE903Z)  
