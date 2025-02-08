@@ -1,5 +1,9 @@
 # OWASP Penetration Test Reporting Standard (OPTRS)
 
+
+<img src="https://github.com/OWASP/www-project-penetration-test-reporting-standard/blob/main/assets/images/optrs-logo-white.png" alt="Alt Text" width="500" height="500">
+
+
 ## Overview  
 
 The **OWASP Penetration Test Reporting Standard (OPTRS)** provides a **structured, machine-readable JSON format** for penetration test reports.  
