@@ -20,7 +20,8 @@
         "date_of_testing",
         "tester_info",
         "recipient",
-        "report_version"
+        "report_version",
+        "report_classification"
       ],
       "properties": {
         "report_id": { "type": "string", "format": "uuid" },
@@ -74,7 +75,8 @@
             }
           }
         },
-        "report_version": { "type": "string" }
+        "report_version": { "type": "string" },
+        "report_classification": { "type": "string", "enum": ["TLP:CLEAR", "TLP:GREEN", "TLP:AMBER", "TLP:RED", "Draft", "Confidential", "Public"] }
       }
     },
     "scope": {
